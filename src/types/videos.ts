@@ -1,5 +1,6 @@
 export interface VideoProject {
   id: string;
+  language?: string;
   video_title: string;
   video_description: string;
   tags: string[];
