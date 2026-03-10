@@ -18,7 +18,6 @@ import type { VideoProject } from "@/types/videos";
 
 const categories = getVideoCategoriesWithCountIncludingAll();
 
-// Yahan humne countryCode accept kar liya Vercel se
 export default function ClientHome({ countryCode = "IN" }: { countryCode?: string }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [displayedProjects, setDisplayedProjects] = useState<VideoProject[]>([]);
@@ -30,28 +29,47 @@ export default function ClientHome({ countryCode = "IN" }: { countryCode?: strin
     }
     return 1;
   });
-  
+
   useEffect(() => {
     sessionStorage.setItem('portfolioCurrentPage', currentPage.toString());
   }, [currentPage]);
-  
+
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
 
   const ITEMS_PER_PAGE = 14;
 
-  // Load projects for selected category WITH VIP SORTING
+  // Load projects for selected category WITH PERFECT GRID & VIP SORTING
   useEffect(() => {
     let projects = getVideoProjectsByCategory(selectedCategory);
     
-    // 🔥 VIP Foreign Client Logic 🔥
-    // Agar banda India se bahar ka hai, toh english videos upar kardo
+    // 🔥 VIP Foreign Client + Perfect Grid Logic 🔥
     if (countryCode !== "IN") {
-      projects.sort((a: any, b: any) => {
-        if (a.language === "english" && b.language !== "english") return -1;
-        if (a.language !== "english" && b.language === "english") return 1;
-        return 0; // Baaki jaisa tha waisa rehne do
-      });
+      
+      const englishVideos = projects.filter(p => p.language === "english");
+      const otherVideos = projects.filter(p => p.language !== "english");
+
+      const makePerfectGrid = (videoList: VideoProject[]) => {
+        const horizontals = videoList.filter(p => p.orientation !== "vertical");
+        const verticals = videoList.filter(p => p.orientation === "vertical");
+
+        let arranged: VideoProject[] = [];
+
+        while (horizontals.length >= 3) {
+          arranged.push(...horizontals.splice(0, 3));
+        }
+
+        while (verticals.length >= 4) {
+          arranged.push(...verticals.splice(0, 4));
+        }
+
+        arranged.push(...horizontals);
+        arranged.push(...verticals);
+
+        return arranged;
+      };
+
+      projects = [...makePerfectGrid(englishVideos), ...makePerfectGrid(otherVideos)];
     }
 
     setAllProjects(projects);
