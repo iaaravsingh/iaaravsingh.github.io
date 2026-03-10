@@ -84,6 +84,7 @@ export const allVideoProjects: VideoProject[] = [
   {
     id: "0rtruoHRSPk",
     orientation: "vertical",
+    language: "english",
     video_title: "2D Animated Commercial | The 'Problem-Solution' Hook",
     video_description:
       "A 100% custom 2D animated ad for a Canadian brand. Leveraged a strong 'problem-solution' hook—visualizing a snow-blocked driveway before revealing a fast, satisfying fix—to grab attention and drive local leads.",
@@ -200,6 +201,7 @@ export const allVideoProjects: VideoProject[] = [
   {
     id: "V0Kd-2KGN7k",
     orientation: "vertical",
+    language: "english",
     video_title: "Motion Graphics Promo | Service Explainer",
     video_description:
       "High-converting animated campaign for Snow Bros, Canada. Engineered for local brand awareness using fast-paced 2D transitions, bold typography, and engaging visual elements to accelerate customer acquisition for their snow removal services.",
@@ -238,6 +240,7 @@ export const allVideoProjects: VideoProject[] = [
     },
     {
       id: "hgXCHXh0UvI",
+      language: "english",
       orientation: "vertical",
       video_title: "154K+ Insta Views: Business & Geopolitics Storytelling",
       video_description: "Edited a high-impact podcast short for 'Nexxt in Line with Mohit Goel' discussing India's transformation from a 'scam country' to a global business hub. Focused on bold typography, fast-paced delivery, and authoritative visual storytelling to retain audience attention on a serious topic. Organically crossed 154K+ views on Instagram.",
@@ -277,6 +280,7 @@ export const allVideoProjects: VideoProject[] = [
     {
       id: "kz_IXj43Tj4", 
       orientation: "vertical",
+      language: "english",
       video_title: "Social Impact Edit: Is UP Safe for Women?",
       video_description: "Edited a highly impactful and sensitive podcast short for 'Nexxt in Line with Mohit Goel' discussing the critical social issue of women's safety in UP. Focused on powerful visual storytelling, compelling B-rolls, and a serious tonal pacing to address heavy subjects effectively.",
       tags: ["Podcast Short", "Social Issue", "Documentary Style", "Visual Storytelling"],
@@ -295,6 +299,7 @@ export const allVideoProjects: VideoProject[] = [
     },
     {
       id: "0pf_aNHb1Hs",
+      language: "english",
       orientation: "vertical",
       video_title: "Corporate Interview Edit | Tech & Education",
       video_description: "Edited a clean, professional interview short for Newton School of Technology featuring an intern's conversation with the CTO of 30 Sundays. Focused on sharp pacing, professional typography, and crisp audio to make corporate/educational content highly engaging for students and tech professionals.",
@@ -334,6 +339,7 @@ export const allVideoProjects: VideoProject[] = [
   {
     id: "DV_fRkxJrkw",
     orientation: "vertical",
+    language: "english",
     video_title: "Animated Product Teaser | Interactive Hook",
     video_description:
       "An experimental, fast-paced animated teaser for a perfume brand's new launch. Designed specifically to maximize audience interaction, the edit uses rapid visual clues to hint at the launch location, ending with a strong 'Guess the City' CTA to drive massive comment-section engagement.",
@@ -353,6 +359,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "geUk0_P3E8k",
+    language: "english",
     video_title: "Story-Driven Interview Edit – Newton School of Technology",
     video_description: "An engaging, narrative-focused interview edit for Newton School of Technology featuring a student's journey from cracking JEE to joining NST. Structured the storyline for maximum emotional impact and viewer retention. Utilized clean cuts, seamless audio enhancement, and dynamic pacing in Premiere Pro to build trust and effectively communicate the brand's core message.",
     tags: [ "Talking Head", "Interview Edit", "EdTech", "Storytelling", "Testimonial",],
@@ -371,6 +378,7 @@ export const allVideoProjects: VideoProject[] = [
   {
     id: "8wCGtFmtYOQ",
     video_title: "Dynamic Tech Promo – Newton School of Technology",
+    language: "english",
     video_description: `A highly engaging, fast-paced promotional edit for Newton School of Technology. Blended seamless cuts and dynamic pacing in Premiere Pro with custom motion graphics, text animations, and visual enhancements crafted in After Effects. The edit maintains a modern, tech-forward aesthetic designed to maximize viewer retention and effectively communicate the brand's vision.`,
     tags: ["EdTech", "Education Innovation"],
     cover_image: "8wCGtFmtYOQ",
@@ -387,6 +395,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "V_PzeAjqv8s",
+    language: "english",
     video_title: "PepsiCo India – Full Corporate Video Edit",
     video_description:
       "A complete, professional video edit crafted for PepsiCo India. Managed the full end-to-end post-production workflow, focusing on seamless cuts, dynamic corporate pacing, and maintaining strict brand guidelines. The entire project was assembled, synced, and polished exclusively using Premiere Pro to deliver a clean and highly engaging final product.",
@@ -405,6 +414,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "0muw9kNvAH0",
+    language: "english",
     video_title: "PepsiCo India – Full Corporate Video Edit",
     video_description: `A complete, professional video edit crafted for PepsiCo India. Managed the full end-to-end post-production workflow, focusing on seamless cuts, dynamic corporate pacing, and maintaining strict brand guidelines. The entire project was assembled, synced, and polished exclusively using Premiere Pro to deliver a clean and highly engaging final product.`,
     tags: [ "Corporate Video", "Professional Edit", "Brand Identity", "PepsiCo India",],
@@ -422,6 +432,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "y16wD38s9ok",
+    language: "english",
     video_title: "PepsiCo India – Full Corporate Video Edit",
     video_description: `A complete, professional video edit crafted for PepsiCo India. Managed the full end-to-end post-production workflow, focusing on seamless cuts, dynamic corporate pacing, and maintaining strict brand guidelines. The entire project was assembled, synced, and polished exclusively using Premiere Pro to deliver a clean and highly engaging final product.`,
     tags: ["Corporate Video", "Professional Edit", "Brand Identity", "PepsiCo India"],
@@ -460,6 +471,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "rixE9B52Fa4",
+    language: "english",
     video_title: "Corporate LinkedIn Trailer – PepsiCo India | Tanu Sinha",
     video_description: `A crisp corporate LinkedIn trailer crafted for PepsiCo India, featuring Tanu Sinha with clean pacing, professional transitions, and a polished tone designed for high-impact social engagement.`,
     tags: ["LinkedIn Trailer", "Corporate Video", "Personal Branding", "PepsiCo India", "Professional Edit"],
@@ -477,6 +489,7 @@ export const allVideoProjects: VideoProject[] = [
   },
   {
     id: "NkdV1rr7gtQ",
+    language: "english",
     video_title: "Corporate LinkedIn Trailer – PepsiCo India | Souvik Sinha Roy",
     video_description: `A crisp corporate LinkedIn trailer crafted for PepsiCo India, featuring Souvik Sinha Roy with clean pacing, professional transitions, and a polished tone designed for high-impact social engagement.`,
     tags: ["LinkedIn Trailer", "Corporate Video", "Personal Branding", "PepsiCo India", "Professional Edit"],
@@ -496,6 +509,7 @@ export const allVideoProjects: VideoProject[] = [
   {
     id: "B0m9hn--BXo",
     video_title: "Chaat.Ca – High-Impact Promotional Motion Graphics",
+    language: "english",
     video_description: `A dynamic full motion graphics promotional video created for Chat.Ca, designed with bold typography, smooth transitions, and engaging visual storytelling to drive brand awareness and digital engagement.`,
     tags: [
       "Motion Graphics", "Promotional Video", "Brand Promo", "Animated Explainer", "Digital Campaign",
@@ -516,6 +530,7 @@ export const allVideoProjects: VideoProject[] = [
   {
     id: "JA_diJPCOW4",
     video_title: "Corporate LinkedIn Trailer – PepsiCo India | Namrata Sakia",
+    language: "english",
     video_description: `A polished corporate LinkedIn trailer crafted for PepsiCo India, spotlighting Namrata Sakia’s leadership presence with clean transitions, refined pacing, and a professional visual tone tailored for high-impact social engagement.`,
     tags: [
       "LinkedIn Trailer",
