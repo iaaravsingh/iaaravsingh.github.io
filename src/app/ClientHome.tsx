@@ -39,37 +39,50 @@ export default function ClientHome({ countryCode = "IN" }: { countryCode?: strin
 
   const ITEMS_PER_PAGE = 14;
 
-  // Load projects for selected category WITH PERFECT GRID & VIP SORTING
+  // Load projects for selected category WITH ALTERNATING VIP GRID
   useEffect(() => {
     let projects = getVideoProjectsByCategory(selectedCategory);
     
-    // 🔥 VIP Foreign Client + Perfect Grid Logic 🔥
+    // 🔥 VIP Foreign Client + Alternating Grid Logic 🔥
     if (countryCode !== "IN") {
       
       const englishVideos = projects.filter(p => p.language === "english");
       const otherVideos = projects.filter(p => p.language !== "english");
 
-      const makePerfectGrid = (videoList: VideoProject[]) => {
+      const makeAlternatingGrid = (videoList: VideoProject[]) => {
         const horizontals = videoList.filter(p => p.orientation !== "vertical");
         const verticals = videoList.filter(p => p.orientation === "vertical");
 
         let arranged: VideoProject[] = [];
 
-        while (horizontals.length >= 3) {
-          arranged.push(...horizontals.splice(0, 3));
-        }
+        // 🔄 Alternating Loop: 3 Horizontal -> 4 Vertical -> Repeat!
+        while (horizontals.length > 0 || verticals.length > 0) {
+          let madePerfectRow = false;
 
-        while (verticals.length >= 4) {
-          arranged.push(...verticals.splice(0, 4));
-        }
+          // Step 1: Ek row Horizontal ki lagao (3 videos)
+          if (horizontals.length >= 3) {
+            arranged.push(...horizontals.splice(0, 3));
+            madePerfectRow = true;
+          }
 
-        arranged.push(...horizontals);
-        arranged.push(...verticals);
+          // Step 2: Ek row Vertical ki lagao (4 videos)
+          if (verticals.length >= 4) {
+            arranged.push(...verticals.splice(0, 4));
+            madePerfectRow = true;
+          }
+
+          // Step 3: Agar dono ke perfect sets khatam ho gaye, toh jo bachi-kuchi videos hain unhe aakhiri mein daal do
+          if (!madePerfectRow) {
+            arranged.push(...horizontals.splice(0, horizontals.length));
+            arranged.push(...verticals.splice(0, verticals.length));
+          }
+        }
 
         return arranged;
       };
 
-      projects = [...makePerfectGrid(englishVideos), ...makePerfectGrid(otherVideos)];
+      // Dono ko arrange karke jod do (Pehle English, Phir Hindi)
+      projects = [...makeAlternatingGrid(englishVideos), ...makeAlternatingGrid(otherVideos)];
     }
 
     setAllProjects(projects);
