@@ -280,7 +280,6 @@ export const allVideoProjects: VideoProject[] = [
     {
       id: "kz_IXj43Tj4", 
       orientation: "vertical",
-      language: "english",
       video_title: "Social Impact Edit: Is UP Safe for Women?",
       video_description: "Edited a highly impactful and sensitive podcast short for 'Nexxt in Line with Mohit Goel' discussing the critical social issue of women's safety in UP. Focused on powerful visual storytelling, compelling B-rolls, and a serious tonal pacing to address heavy subjects effectively.",
       tags: ["Podcast Short", "Social Issue", "Documentary Style", "Visual Storytelling"],
